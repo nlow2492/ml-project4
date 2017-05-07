@@ -53,8 +53,7 @@ class LearningAgent(Agent):
         else:
             self.t += 1
             a = 3.0/self.training_trials
-            #a = 1.5/self.training_trials
-            #self.epsilon = math.cos(a*self.t)
+            self.alpha = 0.0001
             self.epsilon = math.exp(-a*self.t)
         return None
 
